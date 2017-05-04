@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_match"
+            android:title="Edit Match" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings" />
+
+    </group>
+
+    <item android:id="@+id/menu_title_game_name"
+        android:title="Game Name"
+        android:visible="true">
+        <menu>
+
+            <group android:checkableBehavior="single"
+                android:id="@+id/menu_team_review">
+
+                <item
+                    android:id="@+id/nav_team"
+                    android:title="Team 9925" />
+
+                <item
+                    android:id="@+id/nav_team"
+                    android:title="Team 4150" />
+
+            </group>
+
+        </menu>
+    </item>
+
+</menu>
