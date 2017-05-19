@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.deltaroboticsftc.scouting_app_v4.BackendlessLink.GetPublishedGamesBackendlessLink;
+import org.deltaroboticsftc.scouting_app_v4.Managers.GameContentManager;
 
 public class MatchActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +33,13 @@ public class MatchActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         GetPublishedGamesBackendlessLink.getPublishedGames(this);
+
+        String content = "@1=(|+|S|Auto|)!" +
+                "@2=(|+|C|Counter #1|0|1|NA|0|)!" +
+                "@3=(|+|R|Radio Group #1|2|^1=(|True|)|^2=(|False|)|2|)!" +
+                "@4=(|+|T|Textarea 1|L|)!" +
+                "@null!";
+        GameContentManager.decode(content, this);
     }
 
     @Override
