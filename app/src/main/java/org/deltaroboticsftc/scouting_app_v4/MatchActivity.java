@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import org.deltaroboticsftc.scouting_app_v4.BackendlessLink.GetPublishedGamesBackendlessLink;
 import org.deltaroboticsftc.scouting_app_v4.Managers.GameContentManager;
+import org.deltaroboticsftc.scouting_app_v4.Managers.IntentManager;
 
 public class MatchActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,7 +81,9 @@ public class MatchActivity extends AppCompatActivity
 
         switch (id)
         {
-
+            case R.id.nav_settings:
+                IntentManager.LoginActivity(this);
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
